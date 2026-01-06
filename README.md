@@ -20,11 +20,11 @@ Proyek ini mendemonstrasikan implementasi Agentic AI modern dengan kemampuan too
 
 **System Architecture**
 Alur kerja agent didefinisikan dalam sebuah graf (StateGraph) sebagai berikut:
-Start: User memberikan klaim/query.
-Chatbot Node: LLM menganalisis input. Apakah ini klaim faktual?
-  - Decision: Jika butuh fakta -> Panggil ToolNode.
-  - Decision: Jika obrolan biasa -> Langsung ke End.
-Tool Node: Mengeksekusi pencarian ke internet menggunakan Tavily API (memfilter domain terpercaya).
-Loop Back: Hasil pencarian dikembalikan ke Chatbot Node untuk disintesis menjadi kesimpulan.
+- Start: User memberikan klaim/query.
+- Chatbot Node: LLM menganalisis input. Apakah ini klaim faktual?
+    - Decision: Jika butuh fakta -> Panggil ToolNode.
+    - Decision: Jika obrolan biasa -> Langsung ke End.
+- Tool Node: Mengeksekusi pencarian ke internet menggunakan Tavily API (memfilter domain terpercaya).
+- Loop Back: Hasil pencarian dikembalikan ke Chatbot Node untuk disintesis menjadi kesimpulan.
 
 <img width="216" height="249" alt="image" src="https://github.com/user-attachments/assets/a46cf784-7cd0-40a5-9747-f27b42ec1059" />
